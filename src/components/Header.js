@@ -6,17 +6,15 @@ function Header() {
 
   return (
     <React.Fragment>
-      <div className="flex items-center justify-center flex-col space-y-6 bg-orange-200 p-2">
-        <div className="text-4xl text-gray-700 ">Games-Finder</div>
+      <div>
+        <div className="bg-amber-300">
+          <div className="shadow-xl rounded-md bg-opacity-50 backdrop-blur-md text-2xl p-2 font-bold">
+            Games-Finder
+          </div>
+        </div>
+        <InputTab data={data} setData={setData}></InputTab>
+        <ItemServices data={data} setData={setData}></ItemServices>
       </div>
-      <InputTab
-        data={data}
-        setData={setData}
-      ></InputTab>
-      <ItemServices
-        data={data}
-        setData={setData}
-      ></ItemServices>
     </React.Fragment>
   );
 }

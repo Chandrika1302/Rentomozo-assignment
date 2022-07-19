@@ -1,7 +1,5 @@
 import React, { useState } from "react";
-// import ItemServices from "../services/ItemServices";
 function InputTab({ setData, data }) {
-  //    const [games,setGames]=useState([]);
   const [inputValue, setInputValue] = useState("");
 
   const handleChange = ({ target }) => {
@@ -21,7 +19,7 @@ function InputTab({ setData, data }) {
     }
 
     for (const game of relevantData) {
-      const relevantGame = copyOfData.find((g) => g.id == game.id);
+      const relevantGame = copyOfData.find((g) => g.id === game.id);
       if (relevantGame) {
         relevantGame.visible = true;
       }
@@ -31,17 +29,17 @@ function InputTab({ setData, data }) {
   };
 
   return (
-    <div className="flex space-x-6 items-center justify-center">
+    <div className="flex space-x-6 items-center justify-center my-10">
       <input
         onChange={handleChange}
         type="text"
-        placeholder="Enter the name of the dish"
+        placeholder="Enter the name of the game"
         value={inputValue}
-        className="border-2 rounded  p-2 w-64"
+        className="border rounded p-2 w-64"
       />
       <button
         onClick={searchItems}
-        className="px-3 py-2 bg-gray-700 rounded text-gray-200"
+        className="px-3 py-2 bg-amber-600 rounded text-gray-200"
       >
         Get Games
       </button>

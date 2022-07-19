@@ -35,18 +35,23 @@ function Exp({ setData, data }) {
   return (
     <div className="App">
       <h1>API Posts</h1>
-      <ul>
-        {relevantData && relevantData.map((game) => {
-            return <li className="game-card">
-                <h3>{game.title}</h3>
-                <p>{game.platform}</p>
+      <div className="flex flex-row flex-wrap text-start justify-center">
+      {relevantData && relevantData.map((game) => {
+            return <div>
+              <div className="flex flex-col p-4 font-serif text-xl my-2">
+                <div className="flex-1 w-64"><span className="font-bold">Name: </span> {game.title}</div>
+                <div className="flex-1 w-64"><span className="font-bold">Platform:</span> {game.platform}</div>
+                <div className="flex-1 w-64"><span className="font-bold">Score: </span> {game.score}</div>
+                <div className="flex-1 w-64"><span className="font-bold">Genre: </span> {game.genre}</div>
+                <div className="flex-1 w-64"><span className="font-bold">Editor's Choice: </span>{game.editors_choice}</div>
                 <br /> 
-
-            </li>
+              </div>
+            </div>
         }
-        
         )}
-      </ul>
+
+      </div>
+       
     </div>
   );
 }
