@@ -39,7 +39,7 @@ function InputTab({ setData, data }) {
       />
       <button
         onClick={searchItems}
-        className="px-3 py-2 bg-amber-600 rounded text-gray-200"
+        className="px-3 py-2 bg-amber-600 hover:bg-amber-700 rounded text-gray-200"
       >
         Get Games
       </button>

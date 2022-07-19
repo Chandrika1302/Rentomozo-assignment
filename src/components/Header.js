@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import ItemServices from "../services/ItemServices";
 import InputTab from "./InputTab";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Header() {
   const [data, setData] = useState(null);
 
